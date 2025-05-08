@@ -109,3 +109,12 @@ class SingleLinklist {
     }
 
 };
+
+int main()
+{
+    SingleLinklist Mhs;
+    int nim;
+    char ch;
+    while (1)
+
+}
