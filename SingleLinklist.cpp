@@ -73,5 +73,7 @@ class SingleLinklist {
             *current = (*current)->next;
         }
 
+        return (*current != NULL);
+    }
 
 };
