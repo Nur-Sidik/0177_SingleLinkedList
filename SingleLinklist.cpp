@@ -127,6 +127,76 @@ int main()
         cout << "5. Keluar" << endl;
         cout << endl
              << "Masukkan Pilihan (1-5): ";
+        cin >> ch;
+        switch (ch)
+        {
+            case '1':
+            {
+                Mhs.addNode();
+            }
+            break;
+            case '2':
+            {
+                if (Mhs.listempty())
+                {
+                    cout << endl
+                        << "List Kosong" << endl;
+                    break;
+                }
+                cout << endl
+                     << "\nMasukkan no mahasiswa yang akan di hapus : ";
+                cin >> nim;
+                if (Mhs.delNode(nim) == false)
+                    cout << endl
+                         << "Data tidak di temukkan" << endl;
+                else
+                cout << endl
+                     << "Data dengan nomor mahasiswa " << nim << "Berhasil Di Hapus " << endl;
+            }
+        
+            break;
+            case '3':
+            {
+             Mhs.traverse();
+            }
+            break;
 
+            case '4':
+            {
+                if (Mhs.listempty() == true)
+                {
+                    cout << "\nList Kosong\n";
+                    break;
+                }
+
+                Node *previous, *current;
+
+                cout << endl
+                     << "Masukkan no mahasiswa yang ingin dicari : ";
+                cin >> nim;
+                if (Mhs.Search(nim, &previous, &current) == false)
+                    cout << endl
+                         << "Data tidak di temukan" << endl;
+                else
+                {
+                    cout << endl
+                         << "Data di temukkan" << endl;
+                    cout << "\nNo Mahasiswa: " << current->noMhs << endl;
+                    cout <<"\n";
+                }
+            }
+            break;
+
+            case '5':
+            {
+                exit(0);
+            }
+            break;
+            default:
+            {
+                cout << "Pilihan Salah!!" << endl;
+            }
+            break;
+        }
     }
 }
