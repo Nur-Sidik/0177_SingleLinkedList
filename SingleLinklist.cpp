@@ -55,4 +55,12 @@ class SingleLinklist {
             previous->next = nodeBaru;
         }
 
-    };
+    
+    }
+    bool listempty()
+    {
+        return (START == NULL);
+    }
+
+
+};
