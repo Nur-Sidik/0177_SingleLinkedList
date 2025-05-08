@@ -89,4 +89,9 @@ class SingleLinklist {
         return true;
     }
 
+    void traverse()
+    {
+
+    }
+
 };
